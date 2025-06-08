@@ -1,21 +1,16 @@
 // Set.cpp : implementation of the Set class
 //
-
 #include "stdafx.h"
 #include "v10.h"
 #include "Set.h"
-
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE
 static char THIS_FILE[] = __FILE__;
 #endif
-
 /////////////////////////////////////////////////////////////////////////////
 // Set implementation
-
 IMPLEMENT_DYNAMIC(Set, CRecordset)
-
 Set::Set(CDatabase* pdb)
 	: CRecordset(pdb)
 {
@@ -37,7 +32,6 @@ CString Set::GetDefaultSQL()
 {
 	return _T("[User]");
 }
-
 void Set::DoFieldExchange(CFieldExchange* pFX)
 {
 	//{{AFX_FIELD_MAP(Set)
@@ -47,16 +41,13 @@ void Set::DoFieldExchange(CFieldExchange* pFX)
 	RFX_Bool(pFX, _T("[manager]"), m_manager);
 	//}}AFX_FIELD_MAP
 }
-
 /////////////////////////////////////////////////////////////////////////////
 // Set diagnostics
-
 #ifdef _DEBUG
 void Set::AssertValid() const
 {
 	CRecordset::AssertValid();
 }
-
 void Set::Dump(CDumpContext& dc) const
 {
 	CRecordset::Dump(dc);
