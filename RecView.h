@@ -27,7 +27,6 @@ public:
 		//{{AFX_VIRTUAL(RecView)
 public:
 	virtual CRecordset* OnGetRecordset();
-	virtual void OnPrint(CDC* pDC, CPrintInfo* pInfo);
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
@@ -35,6 +34,7 @@ protected:
 	virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 	virtual void OnBeginPrinting(CDC* pDC, CPrintInfo* pInfo);
 	virtual void OnEndPrinting(CDC* pDC, CPrintInfo* pInfo);
+	virtual void OnPrint(CDC* pDC, CPrintInfo* pInfo);
 	//}}AFX_VIRTUAL
 // Implementation
 public:

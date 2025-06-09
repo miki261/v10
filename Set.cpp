@@ -25,7 +25,7 @@ Set::Set(CDatabase* pdb)
 
 CString Set::GetDefaultConnect()
 {
-	return _T("ODBC;DSN=V10");
+	return _T("ODBC;DSN=v10");
 }
 
 CString Set::GetDefaultSQL()
